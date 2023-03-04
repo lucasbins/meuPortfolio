@@ -1,0 +1,12 @@
+body {
+  background-color: #cccccc;
+  font-family: Roboto;
+}
+#banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width:92%;
+}
