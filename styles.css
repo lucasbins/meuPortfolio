@@ -1,12 +1,73 @@
-body {
-  background-color: #cccccc;
-  font-family: Roboto;
+html {
+  font-size: 62.5%;
 }
-#banner {
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right,rgba(200,200,200),rgba(245,245,245)); 
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  
+  background-position: center;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+}
+.banner .content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   max-width: 90rem;
-  width:92%;
+  width: 92%;
+}
+.banner .content h1 {
+  color: #000;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.content .info {
+  margin: 3rem auto 0 auto;
+  max-width: 80rem;
+}
+
+.info p {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+}
+
+.content .button {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.btn--bg {
+  padding: 1.5rem 8rem;
+  font-size: 2rem;
+}
+
+.btn {
+  background: #FA9A50;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 800;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-8px);
 }
