@@ -4,7 +4,6 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right,rgba(200,200,200),rgba(245,245,245)); 
 }
 
 a {
@@ -12,12 +11,11 @@ a {
 }
 
 .banner {
-  
   background-position: center;
-  height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
+  height: 60vh;
   position: relative;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/000/534/012/original/abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background-vector.jpg');
+  background-size: 100%;
 }
 .banner .content {
   position: absolute;
@@ -70,4 +68,68 @@ a {
 
 .btn:hover {
   transform: translateY(-8px);
+}
+.mediaSocial {
+  width: 50px;
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.iconMedia {
+  margin: 5px;
+  width: 35px;
+  opacity: 0.5;
+}
+.iconMedia:hover{
+  opacity: 1;
+}
+
+#about {
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120vh;
+}
+
+#about .content{
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+#resume {
+  margin-right: 5rem;
+}
+
+#about .content article{
+  text-align: justify;
+  font-size: 18px;
+  color: #888;
+}
+#about .content div{
+  width: 500px;
+}
+.tags {
+  display: flex;
+  background-color: #888;
+}
+.tag {
+  background-color: lightgrey;
+  font-size: large;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #888;
+  margin: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: xxx-large;
+  text-align: center;
 }
