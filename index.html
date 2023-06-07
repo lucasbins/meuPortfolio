@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&family=Roboto:wght@100;300;500;700&display=swap"
@@ -18,25 +19,33 @@
 
 <body>
   <header>
-    <a href="./">
-      <img src="https://avatars.githubusercontent.com/u/52266466?v=4" width="60" class="rounded-circle" />
-      <span>Lucas Bins</span>
-    </a>
-    <ul>
-      <li>
-        <a href="./" aria-current="page">Home</a>
-      </li>
-      <li>
-        <a href="./#about" aria-current="page">Sobre</a>
-      </li>
-      <li>
-        <a href="./#projects" aria-current="page">Projetos</a>
-      </li>
-      <li>
-        <a href="./#contact" aria-current="page">Contato</a>
-      </li>
-    </ul>
+    <nav>
+      <a href="./" class="logo">
+        <img src="https://avatars.githubusercontent.com/u/52266466?v=4" width="60" class="rounded-circle" />
+        <span>Lucas Bins</span>
+      </a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="./" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./#about" aria-current="page">Sobre</a>
+        </li>
+        <li>
+          <a href="./#projects" aria-current="page">Projetos</a>
+        </li>
+        <li>
+          <a href="./#contact" aria-current="page">Contato</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+  <script src="main.js"></script>
   <section class="banner">
     <div class="mediaSocial">
       <a href="https://github.com/lucasbins" target="_blank">
