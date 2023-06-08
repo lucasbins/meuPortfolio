@@ -55,64 +55,6 @@ nav {
   cursor: pointer;
 }
 
-@media (max-width: 999px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: var(--color-primary);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-  .nav-list li{
-    margin-left: 0;
-    opacity: 0;
-  }
-  .mobile-menu {
-    display: block;
-  }
-  
-  .banner {
-    flex-direction: column;
-    align-items: center;
-  }
-  .mediaSocial {
-    transform: translateY(250px);
-  }
-}
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
-
-@keyframes navLinkFade {
-  from{
-    opacity: 0;
-    transform: translateX(50px);
-  }to{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -128,7 +70,7 @@ nav {
   height: 90vh;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  margin-left: 50px;
 }
 
 .banner h1 {
@@ -142,14 +84,19 @@ nav {
   font-weight: 100;
 }
 
+.banner-content {
+  margin: 0 50px 50px 0;
+}
+
 .banner .btn-contact {
   background-color: var(--color-primary);
   color: black;
-  padding: 20px 80px;
+  width: 100px;
+  padding: 20px 35px;
+  margin: 25px 0 0 50px;
+  text-align: center;
   border-radius: 15px;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 50px;
+  display: block;
 }
 
 .banner #contact:hover {
@@ -238,7 +185,7 @@ footer {
   gap: 20px;
 }
 
-.project img {
+.project img{
   width: 50%;
 }
 
@@ -250,3 +197,83 @@ footer {
   position: absolute;
   margin: 15px 25px;
 }
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: var(--color-primary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mediaSocial {
+    transform: translateY(250px);
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project img{
+    width: 100%;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
