@@ -31,6 +31,13 @@ nav {
   height: 10vh;
 }
 
+h1 {
+  color: var(--color-primary);
+  font-size: 48px;
+  text-align: center;
+  margin: 15px;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -76,6 +83,7 @@ nav {
   margin: 0;
   font-weight: 600;
   font-size: 38px;
+  color: var(--color-black);
 }
 
 .banner h4 {
@@ -98,10 +106,6 @@ nav {
   display: block;
 }
 
-.banner #contact:hover {
-  background-color: var(--color-secondary);
-}
-
 .mediaSocial {
   width: 50px;
   background-color: var(--color-white);
@@ -120,11 +124,6 @@ nav {
 .iconMedia {
   margin: 5px;
   width: 35px;
-  opacity: 0.5;
-}
-
-.iconMedia:hover {
-  opacity: 1;
 }
 
 .scroll {
@@ -134,15 +133,9 @@ nav {
 }
 
 #about {
-  width: 48%;
+  width: 50%;
   margin: auto;
   margin-bottom: 150px;
-}
-
-#about h1 {
-  color: var(--color-primary);
-  font-size: 48px;
-  text-align: center;
 }
 
 #about p {
@@ -151,15 +144,9 @@ nav {
 }
 
 #projects {
-  width: 48%;
+  width: 50%;
   margin: auto;
   margin-bottom: 150px;
-}
-
-#projects h1 {
-  color: var(--color-primary);
-  font-size: 48px;
-  text-align: center;
 }
 
 #contact {
@@ -172,8 +159,6 @@ nav {
 
 #contact h1 {
   color: var(--color-black);
-  font-size: 48px;
-  text-align: center;
 }
 
 .contact-content {
@@ -220,6 +205,29 @@ footer {
   margin: 15px 25px;
 }
 
+.skills {
+  background: var(--color-black);
+  width: 80%;
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.skills div{
+  margin: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills span{
+  color: var(--color-white);
+  padding: 15px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
@@ -257,10 +265,6 @@ footer {
   .mediaSocial {
     transform: translateY(250px);
   }
-
-  /*.banner-img {
-    display: none;
-  }*/
 
   .project {
     flex-direction: column;
