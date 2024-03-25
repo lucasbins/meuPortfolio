@@ -1,45 +1,44 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+const nav = document.querySelector(".nav");
+const btnMenu = document.querySelector(".btn-menu");
+const menu = document.querySelector(".menu");
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+function handleButtonClick(event) {
+  if (event.type === "touchstart") event.preventDefault();
+  event.stopPropagation();
+  nav.classList.toggle("active");
+  handleClickOutside(menu, () => {
+    nav.classList.remove("active");
+    setAria();
+  });
+  setAria();
+}
 
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ?
-        (link.style.animation = "")
-        :
-        (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`)
-    });
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent()
+function handleClickOutside(targetElement, callback) {
+  const html = document.documentElement;
+  function handleHTMLClick(event) {
+    if (!targetElement.contains(event.target)) {
+      targetElement.removeAttribute("data-target");
+      html.removeEventListener("click", handleHTMLClick);
+      html.removeEventListener("touchstart", handleHTMLClick);
+      callback();
     }
-    return this;
+  }
+  if (!targetElement.hasAttribute("data-target")) {
+    html.addEventListener("click", handleHTMLClick);
+    html.addEventListener("touchstart", handleHTMLClick);
+    targetElement.setAttribute("data-target", "");
   }
 }
 
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list li",
-);
+function setAria() {
+  const isActive = nav.classList.contains("active");
+  btnMenu.setAttribute("aria-expanded", isActive);
+  if (isActive) {
+    btnMenu.setAttribute("aria-label", "Fechar Menu");
+  } else {
+    btnMenu.setAttribute("aria-label", "Abrir Menu");
+  }
+}
 
-mobileNavbar.init();
+btnMenu.addEventListener("click", handleButtonClick);
+btnMenu.addEventListener("touchstart", handleButtonClick);
